@@ -1,0 +1,2 @@
+# IdentityUpscaling
+Accompanying Code for the ICIP 2021 Paper "IDENTITY AND ATTRIBUTE PRESERVING THUMBNAIL UPSCALING"
