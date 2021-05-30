@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=3 python train.py --fairface --fairface-weight=5 --batch-size=64
