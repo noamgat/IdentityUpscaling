@@ -32,7 +32,7 @@ celeba_raw = build_aligned_celeba('../CelebA_Raw', '../CelebA_large')
 celeba_orig = CelebA(root='../CelebA_Raw', split=celeba_split, download=False, target_type='identity')
 celeba = celeba_orig
 
-generated_suffix = 'metaepoch2'  # can also be 'generated', 'withidentity', 'metaepoch2'
+generated_suffix = 'withidentity'  # can also be 'generated', 'withidentity', 'metaepoch2'
 if __name__ == '__main__':
     if len(sys.argv) > 2:
         generated_suffix = sys.argv[2]

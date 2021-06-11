@@ -1,0 +1,25 @@
+name: identityupscaling_preprocess
+channels:
+  - pytorch
+  - defaults
+  - conda-forge
+  - menpo
+dependencies:
+  - python=3.6.8
+  - pytorch=1.3.0
+  - mxnet
+  - opencv
+  - tqdm
+  - opencv
+  - pillow
+  - scikit-image
+  - imgaug
+  - pip
+  - tensorboard
+  - pandas
+  - pip:
+      - dlib==19.19.0
+      - facenet_pytorch
+      - torchsummary
+      - git+https://github.com/Tramac/torchscope.git
+
