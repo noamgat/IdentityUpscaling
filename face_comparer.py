@@ -1,7 +1,7 @@
 import math
 
 from bicubic import BicubicDownsampleTargetSize
-from sphereface_pytorch.net_sphere import sphere20a
+# from sphereface_pytorch.net_sphere import sphere20a
 from stylegan import G_synthesis,G_mapping
 from dataclasses import dataclass
 from SphericalOptimizer import SphericalOptimizer

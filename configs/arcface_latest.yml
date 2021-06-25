@@ -8,10 +8,8 @@ model_params:
     feature_normalization_mode: 3
     feature_normalization_scale: 0.1
     feature_extractor_params:
-      model_path: 'InsightFace_v2/pretrained/BEST_checkpoint_fairface_20201114.tar'
-      #model_path: 'InsightFace_v2/pretrained/checkpoint_fairface_20201117.tar'
-      #model_path: 'InsightFace_v2/pretrained/BEST_checkpoint_fairface_20201117.tar'
+      model_path: 'InsightFace_v2/checkpoint_full.tar'
   milestones: [-1, -1]
 checkpoint_params:
   save_last: True
-  filepath: 'saved_models/arcface_fairface'
+  filepath: 'saved_models/arcface_latest'

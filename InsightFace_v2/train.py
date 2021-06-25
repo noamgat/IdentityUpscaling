@@ -155,7 +155,7 @@ def train_net(args):
         criterion = nn.CrossEntropyLoss().to(device)
 
     # Custom dataloaders
-    num_workers = 0 if args.debug else 4
+    num_workers = 0 if args.debug else 2
     train_dataset = ArcFaceDataset('train')
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=num_workers)
 

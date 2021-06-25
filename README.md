@@ -27,12 +27,33 @@ We then use this augmented feature extractor to generate faces with a technique 
 ![Attribute Target](images/AttributeControl.png "Attribute Target")
 
 ## Running Instructions
-TODO
+You must have a working model in order to run.<br>
+The full argument list can be found in run.py.<br>
+For a ready to run example, see `run_obama.sh`.<br>
+There is currently a hard-coded hack in place in `loss.py:72`, if you use `ATTR_X_IS_0/1` loss for faces, leave the code unchanged. For attributes, comment out lines 72-74.
 
 ## Training instructions
+
+### MS1M Dataset
 1. Download ms1m-retinaface-t1.zip from https://github.com/deepinsight/insightface/wiki/Dataset-Zoo , place in InsightFace_v2/data 
 2. run `InsightFace_v2/extract.py`
 3. Install conda environment from `preprocess.yml`
 4. run `python pre_process.py` from InsightFace_v2 directory
+### Fairface Dataset
+5. Download Fairface Database with 0.25 Padding from https://github.com/joojs/fairface and place in fairface directory of root directory
+6. Run `python fairface_dataset.py` from InsightFace_v2 directory
+### CelebA Dataset 
+7. Run `python download_celeba.py` from root directory
+8. Run `python align_face.py CelebA_Raw CelebA_Large 256`
+9. Run `python align_face.py CelebA_Raw CelebA_Small 32` 
+### Adversarial Dataset
+Coming soon
 
-TODO
+### Train the face feature extactor
+10. Run `python train.py` from InsightFace_v2 directory. You may have to adjust batch_size parameter based on GPU memory. This will train the model with just the Arcface loss.
+11. Run `python train.py --adverserial --fairface --attr --checkpoint <step10result> --checkpoint_suffix _full` from InsightFace_v2 directory.
+### Create a configurator file based on your trained model
+12. There are two sample configs in `configs/arcface_best.yml` / `configs/arcface_latest.yml` which use the result of 11 by default 
+
+## Pretrained model
+Coming soon

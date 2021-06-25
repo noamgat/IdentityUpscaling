@@ -45,7 +45,7 @@ dependencies:
   - python=3.8.2
   #- python-dateutil=2.8.1
   - pytorch=1.5.0
-  - pytorch-lightning
+  - pytorch-lightning=0.8.5
   #- pytz=2020.1
   #- readline=8.0
   #- requests=2.23.0
@@ -62,7 +62,7 @@ dependencies:
   #- zlib=1.2.11
   #- zstd=1.3.7
   - scikit-image
-  - kornia
+  - kornia=0.3.0
   - opencv
   - pip:
     - dlib==19.19.0

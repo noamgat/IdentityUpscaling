@@ -61,7 +61,7 @@ class AdverserialFaceDataset(Dataset):
         #celeba_orig = CelebA(root='../CelebA_Raw', split='all', download=False, target_type='identity')
         #celeba = celeba_orig
 
-        generated_suffix = 'metaepoch2'  # can also be 'generated', 'metaepoch2', 'withidentity'
+        generated_suffix = 'withidentity'  # can also be 'generated', 'metaepoch2', 'withidentity'
         generated = build_aligned_celeba('../CelebA_Raw', f'../CelebA_{generated_suffix}', new_image_suffix='_0', split=split)
         large_matching_generated = build_aligned_celeba('../CelebA_Raw', '../CelebA_large',
                                                         custom_indices=generated.filtered_indices, split=split)
