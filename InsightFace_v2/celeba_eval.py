@@ -32,7 +32,7 @@ celeba_raw = build_aligned_celeba('../CelebA_Raw', '../CelebA_large')
 celeba_orig = CelebA(root='../CelebA_Raw', split=celeba_split, download=False, target_type='identity')
 celeba = celeba_orig
 
-generated_suffix = 'withidentity'  # can also be 'generated', 'withidentity', 'metaepoch2'
+generated_suffix = 'withidentity_256'  # can also be 'generated', 'withidentity_256', 'metaepoch2'
 if __name__ == '__main__':
     if len(sys.argv) > 2:
         generated_suffix = sys.argv[2]
@@ -477,7 +477,7 @@ def paper_acc_test():
     global adverserial_angles_file
 
     models = ['pretrained_BEST_checkpoint_101_20200831_', 'pretrained_BEST_checkpoint_101_adv_20200908_']
-    datasets = ['generated', 'metaepoch2', 'withidentity']
+    datasets = ['generated', 'metaepoch2', 'withidentity_256']
     for model in models:
         for dataset in datasets:
             print("----------------------------------")

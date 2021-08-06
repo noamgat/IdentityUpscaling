@@ -61,7 +61,7 @@ class FaceComparerModule(LightningModule):
         transform_func = functools.partial(BicubicDownsampleTargetSize.downsample_single, size=256, mode='area')
         transform = torchvision.transforms.Lambda(transform_func)
 
-        withidentity = build_aligned_celeba('CelebA_Raw', 'CelebA_withidentity', new_image_suffix='_0', split=split, extra_transforms=[transform])
+        withidentity = build_aligned_celeba('CelebA_Raw', 'CelebA_withidentity_256', new_image_suffix='_0', split=split, extra_transforms=[transform])
         large_matching_withidentity = build_aligned_celeba('CelebA_Raw', 'CelebA_large',
                                                            custom_indices=withidentity.filtered_indices, split=split)
         adverserial_dataset = CelebAAdverserialDataset(withidentity, large_matching_withidentity)

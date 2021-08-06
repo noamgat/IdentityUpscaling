@@ -144,7 +144,7 @@ if __name__ == '__main__':
 
     # Test prediction accuracy on adverserial dataset
     generated = build_aligned_celeba('CelebA_Raw', 'CelebA_generated', new_image_suffix='_0')
-    withidentity = build_aligned_celeba('CelebA_Raw', 'CelebA_withidentity', new_image_suffix='_0')
+    withidentity = build_aligned_celeba('CelebA_Raw', 'CelebA_withidentity_256', new_image_suffix='_0')
     large_matching_generated = build_aligned_celeba('CelebA_Raw', 'CelebA_large', custom_indices=generated.filtered_indices)
     large_matching_withidentity = build_aligned_celeba('CelebA_Raw', 'CelebA_large', custom_indices=withidentity.filtered_indices)
 
