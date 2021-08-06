@@ -47,7 +47,10 @@ There is currently a hard-coded hack in place in `loss.py:72`, if you use `ATTR_
 8. Run `python align_face.py CelebA_Raw CelebA_Large 256`
 9. Run `python align_face.py CelebA_Raw CelebA_Small 32` 
 ### Adversarial Dataset
-Coming soon
+Download dataset from 
+https://drive.google.com/file/d/1lnp7d9FEGgPFsuDwoqMVITFs_dIFRyJ-/view?usp=sharing
+
+and extract in main directory.
 
 ### Train the face feature extactor
 10. Run `python train.py` from InsightFace_v2 directory. You may have to adjust batch_size parameter based on GPU memory. This will train the model with just the Arcface loss.
